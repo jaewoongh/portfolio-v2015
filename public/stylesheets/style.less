@@ -1,0 +1,216 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);
+@color-foreground: #000000;
+@color-background: #ffffff;
+@color-point: #36c087;
+@color-point-bright: #43f7b0;
+@color-subtle: #eefff6;
+
+@num-works: 22;
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  color: @color-foreground;
+}
+
+a {
+  color: @color-foreground;
+  background: @color-subtle;
+  text-decoration: none;
+  &:hover {
+    color: @color-point;
+    background: none;
+    -webkit-transition: color 0.1s ease-out, background 0.1s ease-out;
+    transition: color 0.1s ease-out, background 0.1s ease-out;
+  }
+  cursor: pointer;
+}
+
+* {
+  &::selection {
+    background: @color-point-bright;
+  }
+}
+
+#side {
+  display: table-cell;
+  vertical-align: top;
+  text-align: right;
+  line-height: 1.5em;
+  padding: 2em 2em 0 1em;
+  min-width: 11.5em;
+  cursor: default;
+  #sidetitle {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 0 0 1em 0;
+  }
+  .slipsheet {
+    font-weight: 600;
+    margin: 1em 0 0 0;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    background: none;
+  }
+  #preloader {
+    width: 1em;
+    height: 1em;
+    margin: 2em;
+  }
+  #delay-animation(@n) when (@n > 0) {
+    #delay-animation((@n - 1));
+    visibility: hidden;
+    opacity: 0;
+    &:nth-child(@{n}) {
+      -webkit-transition: all 0.3s ease-out unit((@n*0.01),s);
+      transition: all 0.3s ease-out unit((@n*0.01),s);
+    }
+  }
+  #shylist {
+    div {
+      visibility: hidden;
+      opacity: 0;
+      -webkit-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+    li {
+      #delay-animation(@num-works);
+    }
+  }
+}
+
+#content {
+  display: table-cell;
+  vertical-align: top;
+  padding: 1em;
+}
+
+#pitch {
+  font-weight: 400;
+  font-size: 2.4em;
+  p {
+    margin: 0 0 0.7em 0;
+  }
+}
+
+#myself {
+  margin: 0 0 2em 0;
+  white-space: nowrap;
+  img {
+    height: 15em;
+    display: inline-block;
+  }
+}
+
+#icantalk {
+  font-weight: 400;
+  line-height: 1.6em;
+  .headline {
+    font-size: 1.3em;
+  }
+  sup {
+    font-weight: 300;
+  }
+}
+
+#contact {
+  margin: 2em 0;
+}
+
+#resume {
+  margin: 0 0 3em 0;
+  line-height: 1.6em;
+  #mind-the-gap {
+    font-size: 0.7em;
+  }
+}
+
+#cv {
+  margin: 0;
+  line-height: 1.5em;
+  ul {
+    list-style: none;
+    display: table;
+    border-spacing: 0 0.2em;
+    padding: 0;
+    .title {
+      font-weight: 600;
+    }
+    li {
+      display: table;
+      .when {
+        display: table-cell;
+        width: 5em;
+      }
+      .what {
+        display: table-cell;
+      }
+    }
+  }
+}
+
+article {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6em;
+  h1 {
+    font-size: 0.7em;
+    font-weight: 600;
+    line-height: 1.3em;
+    margin: 0.5em 0;
+    padding: 0;
+  }
+  h2 {
+    font-size: 1.5em;
+    font-weight: 300;
+    line-height: 1.3em;
+    margin: 0.5em 0;
+    padding: 0;
+  }
+  h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    line-height: 1.3em;
+    margin: 2em 0 0 0;
+    padding: 0;
+  }
+  p {
+    margin: 1em 0;
+  }
+  figure {
+    margin: 0.5em 0;
+    padding: 0;
+    figcaption {
+      font-weight: 300;
+    }
+  }
+  .main-figure {
+    img {
+      max-height: 15em;
+    }
+  }
+  .figures {
+    img {
+      max-height: 10em;
+      max-width: 30em;
+      cursor: pointer;
+    }
+  }
+  ul {
+    list-style: outside;
+    margin: 1em 0;
+    padding: 0 0 0 1.5em;
+    li {
+      margin: 0.5em 0;
+    }
+  }
+  footer {
+    font-size: 0.9em;
+    font-weight: 300;
+    margin: 2em 0 0 0;
+  }
+}

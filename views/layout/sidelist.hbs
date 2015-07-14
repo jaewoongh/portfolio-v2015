@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <script src="/javascripts/sidelist.js"></script>
+        <script src="/javascripts/imageviewer.js"></script>
+        <script>window.onload = function() { removePreloader(); attachSidelistAnimation(); attachImageViewer(); }</script>
+    </head>
+    <body>
+        <div id="side">
+            <div id="sidetitle"><a href="/">Jaewoong</a></div>
+            <ul>
+                <li><a href="/about">About</a></li>
+                <li><a href="/cvresume">CV/Resume</a></li>
+                <img id="preloader" src="/images/preloader.gif">
+            </ul>
+            <div id="shylist">
+                <div class="slipsheet">Works</div>
+                <ul>
+                    {{#each worklist}}
+                        <li><a href="/works/{{this.slug}}">{{this.title}}</a></li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div id="content">
+            {{{body}}}
+        </div>
+    </body>
+</html>
