@@ -21,10 +21,14 @@ var attachImageViewer = function() {
                 overlay.style.opacity = 1;
             }.bind(overlay), 300);
             var bigImage = this.cloneNode();
-            bigImage.style.display = 'inline-block';
+            bigImage.style.position = 'absolute';
             bigImage.style.maxWidth = '80%';
             bigImage.style.maxHeight = '80%';
-            bigImage.style.margin = '5% 0';
+            bigImage.style.margin = 'auto';
+            bigImage.style.top = 0;
+            bigImage.style.right = 0;
+            bigImage.style.bottom = 0;
+            bigImage.style.left = 0;
             overlay.appendChild(bigImage);
             overlay.addEventListener('click', function() {
                 window.setTimeout(function() {
