@@ -114,8 +114,12 @@ a {
   }
   #mobilelistup {
     display: none;
+    position: fixed;
+    bottom: 0;
+    padding: 2em;
     text-align: center;
-    color: @color-point;
+    background: @color-point-bright;
+    color: @color-background;
     @media only screen
     and (min-device-width : 320px)
     and (max-device-width : 736px) {

@@ -42,4 +42,8 @@ var attachSidelistAnimation = function() {
             shyones[i].style.opacity = 0;
         }
     }.bind(null, shytitles, shyones));
+    var top = document.getElementById('mobilelistup');
+    top.addEventListener('click', function(evt) {
+        window.scrollTo(0, 0);
+    });
 };
