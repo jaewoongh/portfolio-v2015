@@ -48,7 +48,7 @@ var attachSidelistAnimation = function() {
         window.scrollTo(0, 0);
     });
     window.addEventListener('scroll', function(topbutton) {
-        if (this.offsetParent === null) {
+        if (window.scrollY > this.offsetTop + this.offsetHeight) {
             topbutton.style.opacity = 1;
         } else {
             topbutton.style.opacity = 0;
