@@ -42,8 +42,16 @@ var attachSidelistAnimation = function() {
             shyones[i].style.opacity = 0;
         }
     }.bind(null, shytitles, shyones));
-    var top = document.getElementById('mobilelistup');
-    top.addEventListener('click', function(evt) {
+    var mobilelist = document.getElementById('mobilelist');
+    var topbutton = document.getElementById('mobilelistup');
+    topbutton.addEventListener('click', function(evt) {
         window.scrollTo(0, 0);
     });
+    window.addEventListener('scroll', function(topbutton) {
+        if (this.offsetParent === null) {
+            topbutton.style.opacity = 1;
+        } else {
+            topbutton.style.opacity = 0;
+        }
+    }.bind(mobilelist, topbutton));
 };
