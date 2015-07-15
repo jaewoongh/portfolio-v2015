@@ -23,6 +23,14 @@
                     {{/each}}
                 </ul>
             </div>
+            <div id="mobilelist">
+                <div class="slipsheet">Works</div>
+                <ul>
+                    {{#each worklist}}
+                        <li><a href="/works/{{this.slug}}">{{this.title}}</a></li>
+                    {{/each}}
+                </ul>
+            </div>
         </div>
         <div id="content">
             {{{body}}}

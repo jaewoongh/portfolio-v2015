@@ -80,6 +80,11 @@ a {
     li {
       #delay-animation(@num-works);
     }
+    @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 736px) {
+      display: none;
+    }
   }
   @media only screen
   and (min-device-width : 320px)
@@ -92,6 +97,14 @@ a {
   and (orientation : landscape) {
     display: table-cell;
     font-size: 1.5em;
+  }
+  #mobilelist {
+    display: none;
+    @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 736px) {
+      display: block;
+    }
   }
 }
 
@@ -114,7 +127,7 @@ a {
 
 #mobile-message {
   display: none;
-  font-size: 1.5em;
+  font-size: 2.5em;
   padding: 3em 2em 1em 2em;
   @media only screen
   and (min-device-width : 320px)
