@@ -1,6 +1,6 @@
 {
-  "name": "NewPF",
-  "version": "0.0.0",
+  "name": "Portfolio-v2015",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
