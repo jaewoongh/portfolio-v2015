@@ -1,0 +1,60 @@
+<article>
+    <hgroup>
+        <h1>DungeonScript</h1>
+        <figure class="main-figure">
+            <img src="/images/dungeonscript/main.png" alt="DungeonScript">
+        </figure>
+        <h2>DungeonScript is a language for making HTML5 retro-style first person dungeon crawler games, like Wizardry.</h2>
+    </hgroup>
+    <p>This project is heavily inspired by <a href="http://www.increpare.com">Stephen Lavelle</a>'s <a href="http://www.puzzlescript.net">PuzzleScript</a>, and <a href="https://github.com/nasser/twelve">Twelve</a> by <a href="http://nas.sr">Ramsey Nasser.</a></p>
+    <p>My goal was to make simple and intuitive programming language and web based IDE for people to easily make their own games. It was my first time trying to make my own language, which was a greatly intriguing experience but also a painfully hard process. This was due to the fact that I could be totally on my whim about designing the new language. I could follow some philosophical convention of existing languages (such as Objective Oriented Programming or Entity/Component Model) or try to implement my own thing. In any case, there was infinite freedom over everything, and I really needed to figure out what philosophy serves my goal the best.</p>
+    <h3>Design concerns</h3>
+    <ul>
+        <li>It need to be easier and more intuitive than just javascript.</li>
+        <li>But at the same time it should not look way too exotic.</li>
+        <li>Avoid to be too easy that it could restrict game mechanic possibilities.</li>
+    </ul>
+    <p>In the end, I settled on an idea "Everything is a <em>thing</em> with <em>charms</em>," where 'thing' is sort of an object in a sense of OOP and 'charm' is property that thigns can have. But it is not like OOP. There is no conditionals, loops or variables in a traditional sense. Instead, every line of code is either about creating new thing or setting rules of the game. So if I put it in its most simplest words, you list things that the game will have then set some rules of the game, and all is done.</p>
+    <h3>Documentation and examples</h3>
+    <ul>
+        <li>Look for <a href="http://dungeonscript.herokuapp.com/documentation">DungeonScript documentation</a> for more information.</li>
+        <li>Visit <a href="http://dungeonscript.herokuapp.com/create">DungeonScript create</a> page and check sample codes (upper right menu) and demo game.</li>
+    </ul>
+    <h3>Code sample</h3>
+    <pre><code>☃ A line between two snowmen is a comment line ☃
+☃ This code sample does not run but just to show how it looks like ☃
+
+☃ List things that the game will use ☃
+{ player, hp: 15, hp-max: 15, weapon: @short-sword }
+{ weapon, short-sword, att: 5, price: 5 }
+
+☃ Set some rules of the game ☃
+player, hp <= 0 { .hp: 0, .dead }
+
+☃ Drawing map is super easy ☃
+{ map, dungeon-level1, cols: 20, rows: 10,
+  tiles: "####################
+          #...#.#...#....#.#.#
+          #.#.....#...#....#.#
+          #.#.#.#.###.####...#
+          #.###...#.#..#...#.#
+          #.....#............#
+          ##.####...###.###..#
+          ##...#..##.......###
+          #..####............#
+          ####################"
+}</code></pre>
+    <h3>Demo game screenshots</h3>
+    <figure class="figures">
+        <img src="/images/dungeonscript/legend_of_basement_0.png" alt="Legend of Basement">
+        <img src="/images/dungeonscript/legend_of_basement_1.png" alt="Legend of Basement"><br>
+        <img src="/images/dungeonscript/legend_of_basement_2.png" alt="Legend of Basement">
+        <img src="/images/dungeonscript/legend_of_basement_3.png" alt="Legend of Basement"><br>
+        <img src="/images/dungeonscript/legend_of_basement_4.png" alt="Legend of Basement">
+        <img src="/images/dungeonscript/legend_of_basement_5.png" alt="Legend of Basement">
+        <figcaption>As always, all graphical assets done by myself.</figcaption>
+    </figure>
+    <p>Unfortunately, I stopped developing this idea further at this moment after several serious reformation/rethinking of the project.</p>
+    <footer>2014<br>
+    Final project for the class Governing Dynamics of Software taught by <a href="http://nas.sr">Ramsey Nasser</a>.</footer>
+</article>

@@ -4,6 +4,8 @@
 @color-point: #36c087;
 @color-point-bright: #43f7b0;
 @color-subtle: #eefff6;
+@color-gray-subtle: #f5f5f5;
+@color-gray: #cccccc;
 
 @num-works: 22;
 
@@ -318,5 +320,15 @@ article {
     font-size: 0.9em;
     font-weight: 300;
     margin: 2em 0 0 0;
+  }
+  pre {
+    color: @color-foreground;
+    background: @color-gray-subtle;
+    border-radius: 0.2em;
+    border: solid 1px @color-gray;
+    padding: 0.5em 1em;
+    code {
+      background: none;
+    }
   }
 }
